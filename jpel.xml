@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="library" method="upgrade">
+    <name>Jpel</name>
+    <libraryname>jpel</libraryname>
+    <author>https://github.com/pel/pel</author>
+    <creationDate>2016</creationDate>
+    <copyright>https://github.com/pel/pel/blob/master/COPYING</copyright>
+    <license>GPLv2</license>
+    <authorEmail></authorEmail>
+    <authorUrl>https://github.com/pel/pel</authorUrl>
+    <version>0.9.8</version>
+    <description>Library for exif.</description>
+
+    <files>
+        <folder>lsolesen</folder>
+        <filename>jpel.php</filename>
+    </files>
+
+</extension>
