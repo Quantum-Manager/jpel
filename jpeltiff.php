@@ -17,14 +17,14 @@ use lsolesen\pel\PelTiff;
 class JPelTiff implements JPelInterface
 {
 
-    private $jpeg;
+    private $tiff;
     private $exif;
 
     public function __construct($file)
     {
         JLoader::registerNamespace('lsolesen\pel', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel');
-        $this->jpeg = new PelTiff($file);
-        $this->exif = $this->jpeg->getExif();
+        $this->tiff = new PelTiff($file);
+        $this->exif = $this->tiff->getExif();
     }
 
     public function get($name)

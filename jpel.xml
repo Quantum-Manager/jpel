@@ -14,6 +14,9 @@
     <files>
         <folder>lsolesen</folder>
         <filename>jpel.php</filename>
+        <filename>jpelinterface.php</filename>
+        <filename>jpeljpeg.php</filename>
+        <filename>jpeltiff.php</filename>
     </files>
 
 </extension>
