@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="2.5.0" type="library" method="upgrade">
-    <name>Jpel</name>
+    <name>JPel</name>
     <libraryname>jpel</libraryname>
     <author>https://github.com/pel/pel</author>
     <creationDate>2016</creationDate>
