@@ -26,11 +26,13 @@ class JPel
 
         if(in_array($exs, ['jpg', 'jpeg']))
         {
+            JLoader::register('JPelJpeg', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel' . DIRECTORY_SEPARATOR . 'jpeljpeg.php');
             return new JPelJpeg($file);
         }
 
         if($exs === 'tiff')
         {
+            JLoader::register('JPelTiff', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel' . DIRECTORY_SEPARATOR . 'jpeltiff.php');
             return new JPelTiff($file);
         }
 

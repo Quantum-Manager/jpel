@@ -15,22 +15,36 @@ defined('_JEXEC') or die;
 interface JPelInterface
 {
 
-    /**
-     * @param $name
-     * @return mixed
-     */
-    public function get($name) {}
 
     /**
      * @return mixed
      */
-    public function getAll() {}
+    public function getExif();
+
+    /**
+     * @param $exif
+     * @return mixed
+     */
+    public function setExif($exif);
+
+    /**
+     * @param $name
+     * @return mixed
+     */
+    public function get($name);
 
     /**
      * @param $name
      * @param $value
      * @return mixed
      */
-    public function set($name, $value) {}
+    public function set($name, $value);
+
+    /**
+     * @param $name
+     * @param $value
+     * @return mixed
+     */
+    public function save($name);
 
 }

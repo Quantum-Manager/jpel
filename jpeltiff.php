@@ -11,6 +11,8 @@ defined('_JEXEC') or die;
 
 use lsolesen\pel\PelTiff;
 
+JLoader::register('JPelInterface', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel' . DIRECTORY_SEPARATOR . 'jpelinterface.php');
+
 /**
  * Class JPelTiff
  */
@@ -31,11 +33,11 @@ class JPelTiff implements JPelInterface
     {
     }
 
-    public function getAll()
+    public function set($name)
     {
     }
 
-    public function set($name, $value)
+    public function save($file)
     {
     }
 
