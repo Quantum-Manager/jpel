@@ -22,7 +22,7 @@ class JPel
     public static function instance($file)
     {
         $nameSplit = explode('.', $file);
-        $exs = array_pop($nameSplit);
+        $exs = mb_strtolower(array_pop($nameSplit));
 
         if(in_array($exs, ['jpg', 'jpeg']))
         {
