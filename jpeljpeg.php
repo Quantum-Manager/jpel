@@ -9,6 +9,7 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Version;
 use lsolesen\pel\PelDataWindow;
 use lsolesen\pel\PelEntryAscii;
 use lsolesen\pel\PelEntryUndefined;
@@ -41,7 +42,15 @@ class JPelJpeg implements JPelInterface
      */
     public function __construct($file)
     {
-        JLoader::registerNamespace('lsolesen\pel', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel');
+        $jversion = new Version();
+        if (version_compare($jversion->getShortVersion(), '4.0', '<')) {
+			// only for Joomla 3.x
+                JLoader::registerNamespace('lsolesen\pel', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel');
+
+		} else {
+			// only for Joomla 4.x
+            JLoader::registerNamespace('lsolesen\pel', JPATH_LIBRARIES . DIRECTORY_SEPARATOR . 'jpel'. DIRECTORY_SEPARATOR . 'lsolesen'. DIRECTORY_SEPARATOR . 'pel');
+		}
         $data = new PelDataWindow(file_get_contents($file));
 
         $this->file = $file;
