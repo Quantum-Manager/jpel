@@ -1,0 +1,35 @@
+{
+  "type": "joomla-library",
+  "description": "Pel for Joomla",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/Quantum-Manager/jpel",
+  "authors": [
+    {
+      "name": "Dmitrii Cymbal",
+      "role": "Developer, maintainer",
+      "email": "cymbal@delo-design.ru",
+      "homepage": "https://delo-design.ru"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "fileeye/pel": "*"
+  },
+  "replace": {
+    "psr/log": "*",
+    "psr/http-message": "*"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.1"
+    },
+    "vendor-dir": "libraries/vendor",
+    "github-protocols": [
+      "https"
+    ],
+    "prepend-autoloader": false
+  }
+}
