@@ -13,8 +13,8 @@
     <namespace path="src">Joomla\Libraries\JPel</namespace>
     <scriptfile>script.php</scriptfile>
     <languages>
-        <language tag="ru-RU">language/ru-RU/lib_jinterventionimage.sys.ini</language>
-        <language tag="en-GB">language/en-GB/lib_jinterventionimage.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/lib_jpel.sys.ini</language>
+        <language tag="en-GB">language/en-GB/lib_jpel.sys.ini</language>
     </languages>
     <files>
         <folder>libraries</folder>
