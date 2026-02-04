@@ -91,18 +91,22 @@ class JPelJpeg implements JPelInterface
 
 	public function set(string $name, string $value): self
 	{
-
-		$entry = $this->ifd0->getEntry(constant("lsolesen\pel\PelTag::$name"));
-
-		if ($entry === null)
+		try
 		{
-			$entry = new PelEntryAscii(constant("lsolesen\pel\PelTag::$name"), $value);
-			$this->ifd0->addEntry($entry);
+			$entry = $this->ifd0->getEntry(constant("lsolesen\pel\PelTag::$name"));
+			if ($entry === null)
+			{
+				$entry = new PelEntryAscii(constant("lsolesen\pel\PelTag::$name"), $value);
+				$this->ifd0->addEntry($entry);
+			}
+			else
+			{
+				$entry->setValue($value);
+				$this->ifd0->addEntry($entry);
+			}
 		}
-		else
+		catch (\Throwable $e)
 		{
-			$entry->setValue($value);
-			$this->ifd0->addEntry($entry);
 		}
 
 		return $this;
